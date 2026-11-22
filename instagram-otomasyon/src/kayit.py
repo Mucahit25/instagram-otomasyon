@@ -67,13 +67,18 @@ class Kayit:
                         key=lambda p: p.get("olusturma", ""))
         return [p["etiketler"] for p in sirali]
 
-    def takvim_zamanlari(self) -> list[datetime]:
-        """Takvimde yer tutan gönderilerin planlanan zamanları."""
-        zamanlar = []
+    def takvim_kayitlari(self) -> dict[str, datetime]:
+        """Takvimde yer tutan gönderiler: {anahtar: planlanan zaman}. Anahtar Buffer gönderi
+        kimliğidir (yoksa proje kimliği); böylece Buffer'dan gelen aynı gönderi iki kez sayılmaz."""
+        kayitlar = {}
         for p in self.projeler:
             if p.get("durum") in TAKVIMDE_YER_TUTAN and p.get("planlanan"):
-                zamanlar.append(datetime.fromisoformat(p["planlanan"]))
-        return zamanlar
+                anahtar = p.get("buffer_post_id") or f"proje:{p['proje_id']}"
+                kayitlar[anahtar] = datetime.fromisoformat(p["planlanan"])
+        return kayitlar
+
+    def takvim_zamanlari(self) -> list[datetime]:
+        return list(self.takvim_kayitlari().values())
 
     # --- yazma ---
     def ekle(self, proje: dict) -> None:

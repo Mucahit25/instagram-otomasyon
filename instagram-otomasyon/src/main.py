@@ -146,10 +146,12 @@ class Tur:
             return
         self.kayit.bayrak_yaz("bitti_bildirimi_gonderildi", False)
 
-        dolu = self.kayit.takvim_zamanlari()
+        # Aynı gönderi hem kayıtta hem Buffer'da görünür: Buffer kimliğiyle tekilleştir
+        # (Buffer'daki güncel saat kazanır; kullanıcı saati Buffer'da değiştirmiş olabilir).
+        dolu = self.kayit.takvim_kayitlari()
         if self.yayinci is not None:
-            dolu += [g.zaman for g in self.yayinci.planli_gonderileri_getir() if g.zaman]
-        bos = bos_dilimler(self.simdi, self.ayar["paylasim"], dolu)
+            dolu.update({g.id: g.zaman for g in self.yayinci.planli_gonderileri_getir() if g.zaman})
+        bos = bos_dilimler(self.simdi, self.ayar["paylasim"], list(dolu.values()))
         print(f"{len(sonuc.projeler)} yeni proje, {len(bos)} boş zaman dilimi.")
 
         projeler = list(sonuc.projeler)

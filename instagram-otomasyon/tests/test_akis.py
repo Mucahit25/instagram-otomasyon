@@ -140,6 +140,25 @@ def test_en_fazla_siniri(ortam, calistir):
     assert calistir.yayinci.olusturma_sayisi == 1
 
 
+def test_ayni_gonderi_kayit_ve_bufferda_iki_kez_sayilmaz(ortam, calistir):
+    """Gerçek hata (2026-11-22): kayıttaki gönderi Buffer listesinde de göründüğü için haftaya
+    iki kez sayıldı, haftalık sınır erken doldu ve Cuma boş kaldı."""
+    import main
+    from bildirim import Bildirici
+    from conftest import sahte_aciklama
+    for i in range(4):
+        gorsel_yaz(ortam["kok"] / "renderlar" / f"r{i}.jpg", (i * 50, 0, 0))
+
+    def tur(simdi, en_fazla=0):
+        main.calistir(simdi=simdi, kok=ortam["kok"], ayar=ortam["ayar"],
+                      yayinci=calistir.yayinci, depo=calistir.depo, aciklama_fn=sahte_aciklama,
+                      bildirici=Bildirici(ortam["ayar"]), en_fazla=en_fazla)
+
+    tur(PAZARTESI - timedelta(hours=12), en_fazla=1)   # Pazar akşamı: sadece Pazartesi
+    tur(PAZARTESI - timedelta(hours=11))               # sınırsız: Çarşamba + Cuma da dolmalı
+    assert calistir.yayinci.olusturma_sayisi == 3
+
+
 def test_kayit_dosyasi_gecerli_json(ortam, calistir):
     gorsel_yaz(ortam["kok"] / "renderlar" / "a.jpg")
     calistir()
