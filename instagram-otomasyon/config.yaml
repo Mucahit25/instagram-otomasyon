@@ -6,7 +6,7 @@
 aktif: false               # kurulum bitince (GitHub gizli değerleri eklenince) true yapılacak
 
 hesap:
-  instagram_kullanici: fuar.stand.ve.mimari.tasarim
+  instagram_kullanici: concorddesign.tr   # eski adı: fuar.stand.ve.mimari.tasarim (2026-11-22'de değişti)
   marka_adi: ""            # bilerek boş: kullanıcı açıklamada marka adı istemedi (2026-11-22)
   hizmet: "3D fuar standı tasarımı ve görselleştirme"
   # Üretim kuralı (2026-11-22, web sitesiyle aynı): tasarım öne çıkar. "Üretim yapmıyoruz"
