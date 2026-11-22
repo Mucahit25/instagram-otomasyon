@@ -7,6 +7,9 @@ Doğrulanan noktalar (developers.buffer.com, 2026-11-22):
   shareNext | shareNow), dueAt (UTC ISO), saveToDraft, assets [{image:{url}}],
   metadata.instagram {type, shouldShareToFeed}
 - PostStatus: draft, error, needs_approval, scheduled, sending, sent
+Canlı denemeyle doğrulanan (2026-11-22): taslak dueAt'i saklıyor (customScheduled +
+saveToDraft); birden fazla image asset sırasıyla tek Instagram 'post'una gidiyor;
+silinen gönderi post(...) sorgusunda boş dönüyor.
 """
 from __future__ import annotations
 
@@ -168,6 +171,7 @@ class BufferYayinci(Yayinci):
             "query($input: PostsInput!, $first: Int) { posts(first: $first, input: $input) "
             f"{{ edges {{ node {{ {_GONDERI_ALANLARI} }} }} }} }}",
             {"first": adet, "input": {"organizationId": self.org_id(),
+                                      "sort": [{"field": "dueAt", "direction": "desc"}],
                                       "filter": {"status": durumlar,
                                                  "channelIds": [self.kanal_id()]}}})
         kenarlar = ((veri.get("posts") or {}).get("edges")) or []
