@@ -3,7 +3,7 @@
 # Gizli anahtarlar (API key, şifre) ASLA buraya yazılmaz.
 
 # Sistemi tamamen durdurmak için false yap. Hiçbir şey planlanmaz, kayıt korunur.
-aktif: false               # kurulum bitince (GitHub gizli değerleri eklenince) true yapılacak
+aktif: true
 
 hesap:
   instagram_kullanici: concorddesign.tr   # eski adı: fuar.stand.ve.mimari.tasarim (2026-11-22'de değişti)
