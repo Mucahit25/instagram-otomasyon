@@ -2,7 +2,7 @@
 
 > **Render eklemek:** `instagram-otomasyon/renderlar/` klasörüne at. Birden fazla görsel tek gönderide kaydırmalı olsun istiyorsan bir alt klasöre koy. İstersen klasöre `bilgi.txt` ekle (firma, fuar, şehir, m², ahşap/modüler).
 >
-> **Gerisi otomatik:** Sistem her gün kontrol eder. Yeni render varsa düzenler, logonu ekler, açıklamasını ve etiketlerini yazar, en uygun saate (Salı akşam, Çarşamba akşam, Perşembe sabah) koyar. Haftada 3 paylaşım.
+> **Gerisi otomatik:** Sistem her gün kontrol eder. Yeni render varsa düzenler, logonu ekler, açıklamasını ve etiketlerini yazar, en uygun saate (Pazartesi akşam, Çarşamba akşam, Cuma sabah) koyar. Haftada 3 paylaşım.
 >
 > **Render bitince:** Sistem durur ve sana bir kez haber verir. Yeni render eklediğinde kaldığı yerden devam eder. Hiçbir render iki kez paylaşılmaz.
 

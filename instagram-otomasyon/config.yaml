@@ -16,10 +16,12 @@ hesap:
 paylasim:
   haftalik_adet: 3
   saat_dilimi: Europe/Istanbul
+  # Haftaya yayılmış 3 iş günü (2026-11-22 kullanıcı isteği: art arda günler olmasın).
+  # Çarşamba 18:00 Buffer'ın bu hesap için önerisi; Pazartesi/Cuma aynı akşam-sabah düzeninde.
   zaman_dilimleri:
-    - {gun: sali,     bas: "19:00", bit: "20:00"}
-    - {gun: carsamba, bas: "18:00", bit: "19:00"}
-    - {gun: persembe, bas: "10:00", bit: "11:00"}
+    - {gun: pazartesi, bas: "19:00", bit: "20:00"}
+    - {gun: carsamba,  bas: "18:00", bit: "19:00"}
+    - {gun: cuma,      bas: "10:00", bit: "11:00"}
   planlama_ufku_gun: 7
   min_sure_saat: 3
   carousel_max: 10

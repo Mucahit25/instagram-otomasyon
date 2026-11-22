@@ -29,7 +29,7 @@ def test_ayni_proje_iki_kez_gonderilmez(ortam, calistir):
     gorsel_yaz(r / "b.jpg", (20, 20, 20))
     kod, _ = calistir()
     assert kod == 0
-    assert calistir.yayinci.olusturma_sayisi == 2   # Salı ve Çarşamba dilimleri
+    assert calistir.yayinci.olusturma_sayisi == 2   # Pazartesi ve Çarşamba dilimleri
     for gun in range(1, 15):
         calistir(PAZARTESI + timedelta(days=gun))
     assert calistir.yayinci.olusturma_sayisi == 2
@@ -71,7 +71,7 @@ def test_haftada_en_fazla_adet_ve_ufuk(ortam, calistir):
     for i in range(6):
         gorsel_yaz(r / f"r{i}.jpg", (i * 30, 0, 0))
     calistir()
-    # Pazartesi 09:00'da 7 günlük ufuk: Salı, Çarşamba, Perşembe = 3
+    # Pazartesi 09:00'da 7 günlük ufuk: Pazartesi, Çarşamba, Cuma = 3 (haftalık sınır)
     assert calistir.yayinci.olusturma_sayisi == 3
 
 
