@@ -1,0 +1,20 @@
+# Gizli anahtarlar: ASLA yüklenmez
+.env
+.env.*
+!.env.ornek
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Sistem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Yerel deneme çıktıları
+instagram-otomasyon/deneme_cikti/

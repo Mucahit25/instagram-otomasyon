@@ -1,0 +1,81 @@
+# Instagram Otomatik Paylaşım Sistemi: tüm ayarlar burada.
+# Bu dosyadaki değerleri değiştirmek kod değiştirmeden sistemi ayarlar.
+# Gizli anahtarlar (API key, şifre) ASLA buraya yazılmaz.
+
+# Sistemi tamamen durdurmak için false yap. Hiçbir şey planlanmaz, kayıt korunur.
+aktif: false               # kurulum bitince (GitHub gizli değerleri eklenince) true yapılacak
+
+hesap:
+  instagram_kullanici: fuar.stand.ve.mimari.tasarim
+  marka_adi: ""            # bilerek boş: kullanıcı açıklamada marka adı istemedi (2026-11-22)
+  hizmet: "3D fuar standı tasarımı ve görselleştirme"
+  # Üretim kuralı (2026-11-22, web sitesiyle aynı): tasarım öne çıkar. "Üretim yapmıyoruz"
+  # asla yazılmaz, üretim de vaat edilmez. Üretim teklifine kapı açık kalır.
+  stand_tipleri: [ahşap, "modüler (Maxima / Plus)"]
+
+paylasim:
+  haftalik_adet: 3
+  saat_dilimi: Europe/Istanbul
+  zaman_dilimleri:
+    - {gun: sali,     bas: "19:00", bit: "20:00"}
+    - {gun: carsamba, bas: "18:00", bit: "19:00"}
+    - {gun: persembe, bas: "10:00", bit: "11:00"}
+  planlama_ufku_gun: 7
+  min_sure_saat: 3
+  carousel_max: 10
+  siralama: en_eski_once
+  onay_modu: true          # true: Buffer'da taslak açılır, sen planlarsın. false: doğrudan planlanır.
+
+klasorler:                 # instagram-otomasyon/ klasörüne göre yollar
+  renderlar: renderlar
+  hazir: hazir
+  kayit: kayit/paylasimlar.json
+
+dosya:
+  desteklenen_uzantilar: [".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff"]
+  uyari_mb: 25             # bunun üstündeki renderlar için uyarı gönderilir
+  azami_mb: 50             # bunun üstündeki dosyalar atlanır (GitHub sınırı)
+
+gorsel:
+  genislik: 1080
+  yukseklik: 1350
+  yontem: bulanik_cerceve
+  jpeg_kalite: 90
+  azami_cikti_mb: 8
+  bulaniklik_yaricapi: 40
+  arka_plan_karartma: 0.35   # 0 = hiç, 1 = tamamen siyah
+  logo:
+    dosya: logo/logo.png     # kullanıcının koyduğu logo bu ada çevrilir
+    konum: sag_alt           # sag_alt | sol_alt | sag_ust | sol_ust
+    genislik_orani: 0.16     # Concord logosu geniş ve ince yazılı: 0.12'de "DESIGN" okunmuyordu
+    kenar_boslugu_orani: 0.03
+    opaklik: 0.85
+
+aciklama:
+  motor: claude_abonelik     # claude_abonelik (Claude aboneliği) | api (ayrı ücretli API anahtarı)
+  model: claude-sonnet-5-5
+  dil: tr
+  ton: "kısa ve premium"
+  max_karakter: 300
+  gorsel_sayisi: 4           # Claude'a gösterilecek en fazla görsel
+  onceki_aciklama_sayisi: 10
+  emoji_max: 2
+  cagri: "Fuar standı projeniz için DM'den yazın."
+  etiket_sayisi: 5
+  sabit_etiketler: ["#fuarstandı", "#standtasarımı"]
+  # Dönüşümlü genel etiketler: her gönderide kalan yerler buradan sırayla dolar
+  etiket_havuzu: ["#fuartasarımı", "#3dstandtasarımı", "#exhibitionstand", "#standdesign",
+                  "#fuarstanttasarımı"]
+  # Projeye özel etiket önerileri: Claude sadece projeye uyuyorsa seçer
+  proje_etiket_onerileri: ["#ahşapstand", "#modülerstand", "#maximastand", "#alüminyumstand"]
+  # Açıklamada üretim konusu hiç geçmez: ne inkar ("üretim yapmıyoruz", "sadece tasarım")
+  # ne vaat ("üretiyoruz", "anahtar teslim").
+  yasakli_ifadeler: ["üretim", "üretiyoruz", "montaj", "kurulum", "anahtar teslim", "imalat",
+                     "sadece tasarım", "yalnızca tasarım", "sadece 3d", "yalnızca 3d"]
+
+yayinci:
+  tur: buffer                # ileride: meta, upload_post
+
+bildirim:
+  eposta: true
+  whatsapp: false            # CallMeBot kurulunca true

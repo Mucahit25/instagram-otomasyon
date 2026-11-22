@@ -1,0 +1,35 @@
+RENDER NASIL EKLENİR
+====================
+
+1) TEK GÖRSELLİ GÖNDERİ
+   Renderı doğrudan bu klasöre at.
+
+2) KAYDIRMALI GÖNDERİ (birden fazla görsel)
+   Bu klasörün içinde yeni bir klasör aç (adı serbest, örn. 2026-11-ahsap-stand-abc).
+   Görselleri o klasöre koy. Sıralama dosya adına göre olur: 01.jpg, 02.jpg, 03.jpg...
+   Bir gönderide en fazla 10 görsel olur. Fazlası varsa ilk 10'u alınır.
+
+3) BİLGİ NOTU (isteğe bağlı)
+   Klasörün içine "bilgi.txt" adında bir not koyabilirsin. Örnek:
+
+     Firma: ABC Makina
+     Fuar: WIN Eurasia 2026
+     Şehir: İstanbul
+     Alan: 60 m²
+     Tip: Ahşap
+     Not: Açık ofis toplantı alanı, LED duvar
+
+   Not yoksa açıklama sadece görselden yazılır. Firma, fuar, m² uydurulmaz.
+
+GITHUB SİTESİNDEN EKLEMEK
+   Bu klasörün sayfasında sağ üstte "Add file" > "Upload files".
+   Renderları (ya da klasörü komple) sürükle, altta "Commit changes"e bas.
+   Sistem birkaç dakika içinde çalışır.
+
+ÖNEMLİ
+- Renderı JPG olarak kaydet, en fazla ~25 MB olsun. 50 MB üstü dosyalar alınmaz.
+- Desteklenen türler: jpg, jpeg, png, webp, tif.
+- Her render sadece BİR kez paylaşılır.
+- Paylaşılmış bir klasöre sonradan görsel ekleme. Yeni renderları YENİ bir klasöre koy.
+  Daha önce paylaşılmış bir render başka bir klasöre konsa da tekrar paylaşılmaz.
+- Render bitince sistem durur ve sana bir kez haber verir. Yeni render ekleyince kendiliğinden devam eder.
