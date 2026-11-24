@@ -13,7 +13,7 @@
           "hash": "6e41b7536f83bc5829a1baebb3027a8bf816016be1181a9f6ed3f21b28875bb8"
         }
       ],
-      "durum": "planlandi",
+      "durum": "paylasildi",
       "buffer_post_id": "6b030dacc72676f5e93d8f37",
       "planlanan": "2026-11-23T16:59:00+00:00",
       "olusturma": "2026-11-22T15:43:31.931558+00:00",
@@ -26,7 +26,8 @@
         "#3dstandtasarımı"
       ],
       "metin": "Çizgileri net, duruşu güçlü bir alan kurguladık. 🖤 İnce siyah çerçeve yapı, ahşap zemin ve iki gri kolonla dengelenen stantta açık oturma düzeni ile bar bölümü ziyaretçiyi içeri çekiyor. Fuar standı projeniz için DM'den yazın.\n\n#fuarstandı #standtasarımı #modülerstand #fuartasarımı #3dstandtasarımı",
-      "hazir": "hazir/4aabf08ea0069dff"
+      "hazir": "hazir/4aabf08ea0069dff",
+      "paylasilma": "2026-11-23T16:59:00+00:00"
     },
     {
       "proje_id": "26c116db2956194e",
@@ -77,6 +78,31 @@
       ],
       "metin": "Işığı ve dokuyu aynı kadraja topladık. 🌸 Koyu dikey çıtalı duvarları mor neon kemerler ve çiçek kompozisyonlarıyla canlandırdık; iki yanda büyük ışıklı paneller, ortada ziyaretçiyi karşılayan bir tezgâh var. Fuar standı projeniz için DM'den yazın.\n\n#fuarstandı #standtasarımı #optikfuarı #fuartasarımı #3dstandtasarımı",
       "hazir": "hazir/be145aa84ef619f8"
+    },
+    {
+      "proje_id": "75f37053adbe17a2",
+      "ad": "Tolard.jpeg",
+      "tur": "tekli",
+      "gorseller": [
+        {
+          "ad": "Tolard.jpeg",
+          "hash": "4159c2d69d99799c9a7e3f4a98f6f9b14dc695a576084579a8515a296f051b03"
+        }
+      ],
+      "durum": "gonderiliyor",
+      "buffer_post_id": null,
+      "planlanan": "2026-11-30T19:33:00+03:00",
+      "olusturma": "2026-11-24T07:29:32.897971+00:00",
+      "aciklama": "Mavi ışık çizgisiyle fark edilen bir köşe stand tasarladık. Koyu gri duvarları spot aydınlatmalı beyaz tavan ve LED çerçevelerle dengeledik; beyaz teşhir tezgâhları, ekranlar ve büyük görsel paneller bakışı doğal biçimde yönlendiriyor. Fuar standı projeniz için DM'den yazın.",
+      "etiketler": [
+        "#fuarstandı",
+        "#standtasarımı",
+        "#köşestand",
+        "#exhibitionstand",
+        "#standdesign"
+      ],
+      "metin": "Mavi ışık çizgisiyle fark edilen bir köşe stand tasarladık. Koyu gri duvarları spot aydınlatmalı beyaz tavan ve LED çerçevelerle dengeledik; beyaz teşhir tezgâhları, ekranlar ve büyük görsel paneller bakışı doğal biçimde yönlendiriyor. Fuar standı projeniz için DM'den yazın.\n\n#fuarstandı #standtasarımı #köşestand #exhibitionstand #standdesign",
+      "hazir": "hazir/75f37053adbe17a2"
     }
   ],
   "gonderilen_uyarilar": []
