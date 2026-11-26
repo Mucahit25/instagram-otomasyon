@@ -39,7 +39,7 @@
           "hash": "c6467e18b3fc8ff3b6f278123b2d4e0b4666977615dc4e09396c8a5dee3e76d1"
         }
       ],
-      "durum": "planlandi",
+      "durum": "paylasildi",
       "buffer_post_id": "6b031941cc364169c16b1534",
       "planlanan": "2026-11-25T15:39:00+00:00",
       "olusturma": "2026-11-22T16:32:58.731459+00:00",
@@ -52,7 +52,8 @@
         "#fuarstanttasarımı"
       ],
       "metin": "Kuşbakışı bile iddialı duran bir stand kurguladık. Koyu gri yüzeyleri ahşap çıtalı tavan detayları ve sıcak ışıklarla yumuşattık; açık zeminde yuvarlak masalı oturma alanı, yanında büyük ekranlı bir duvar var. Fuar standı projeniz için DM'den yazın.\n\n#fuarstandı #standtasarımı #exhibitionstand #standdesign #fuarstanttasarımı",
-      "hazir": "hazir/26c116db2956194e"
+      "hazir": "hazir/26c116db2956194e",
+      "paylasilma": "2026-11-25T15:39:00+00:00"
     },
     {
       "proje_id": "be145aa84ef619f8",
